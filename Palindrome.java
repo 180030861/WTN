@@ -3,19 +3,15 @@ public class Palindrome
 {
 	public static void main(String args[])
 	{
-		int n ;
+		String s;
 		Scanner sc = new Scanner(System.in);
-		n = sc.nextInt();
-		int temp = n;
-		int rev = 0;
-		
-		while(n > 0)
-		{	
-			rev = rev*10 + (n % 10);
-			n /= 10;
+		s=sc.next();
+		String res ="";
+		for(int i=s.length()-1;i>=0;i--)
+		{
+			res+= s.charAt(i);
 		}
-		if(temp == rev) System.out.println("Palindrome");
+		if(s.equals(res)) System.out.println("Palindrome");
 		else System.out.println("Not a palindrome");
 	}
-
 }
